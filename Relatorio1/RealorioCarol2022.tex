@@ -1,0 +1,352 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% PROJETO MARCOS ALEXANDRINO
+%%%%%%% TEMÁTICO DE PAOLO PICCIONE (2016)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[11pt]{amsart}
+%\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amsfonts,amsmath,amsthm}
+%%
+%%obs o BABEL nao interfere com outros pacotes. 
+%Porem voce recebera 1 warning, referente a  ifenaçao do portugues
+%ignore!
+
+%%PACOTES DA CAROL
+
+\usepackage[mathscr]{euscript}
+\let\euscr\mathscr \let\mathscr\relax% just so we can load this and rsfs
+\usepackage[scr]{rsfso}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{stackengine}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{bussproofs}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage[hidelinks]{hyperref}
+\usepackage{setspace}
+\usepackage{nopageno}
+\usepackage{fancyhdr}
+\usepackage{tikz-cd}
+
+
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shapes}
+
+\newcommand{\mytitle}[1]{\textbf{\underline{#1}}}
+\newcommand{\product}[3]{\displaystyle\prod_{#1}^#2 #3}
+\newcommand{\gsum}[3]{\displaystyle\sum_{#1}^#2 #3}
+\newcommand{\dint}[0]{\displaystyle\int}
+\newcommand{\dsum}[0]{\displaystyle\sum}
+\newcommand{\del}[0]{\partial}
+\newcommand{\de}[0]{\text{d}}
+\newcommand{\parti}[2]{\frac{\del #1}{\del #2}}
+\newcommand{\deri}[2]{\frac{\de #1}{\de #2}}
+\newcommand{\mdc}[0]{\text{mdc}}
+\newcommand{\mmc}[0]{\text{mmc}}
+\newcommand{\im}[0]{\text{Im}}
+\newcommand{\e}[0]{\text{e}}
+\newcommand{\ou}[0]{\text{ou}}
+\newcommand{\se}[0]{\text{se}}
+\newcommand{\tr}[0]{\text{tr}}
+\newcommand{\<}[0]{\langle}
+\newcommand{\Q}[0]{\mathbb{Q}}
+\newcommand{\K}[0]{\mathbb{K}}
+\renewcommand{\>}[0]{\rangle}
+\newcommand{\ov}[0]{\overline}
+\newcommand{\real}[0]{\mathbb{R}}
+\newcommand{\rr}[0]{\mathbb{R}^2}
+\newcommand{\rn}[0]{\mathbb{R}^n}
+\newcommand\xrowht[2][0]{\addstackgap[.5\dimexpr#2\relax]{\vphantom{#1}}}
+\newcommand{\card}[0]{\text{card}}
+\newcommand{\aut}[0]{\text{Aut}}
+\newcommand{\inn}[0]{\text{Inn}}
+\newcommand{\ann}[0]{\text{Ann}}
+\newcommand{\id}[0]{\text{Id}}
+\newcommand{\into}[0]{\hookrightarrow}
+\newcommand{\Z}[0]{\mathbb{Z}}
+\newcommand{\T}[0]{\mathbb{T}}
+\newcommand{\M}[0]{\mathbb{M}}
+\renewcommand{\P}[0]{\mathbb{P}}
+\renewcommand{\S}[0]{\mathbb{S}}
+\newcommand{\D}[0]{\mathbb{D}}
+\newcommand{\N}[0]{\mathbb{N}}
+\newcommand{\disp}[0]{\displaystyle}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\sgn}[0]{\text{sgn}}
+\newcommand{\ab}[0]{\text{Ab}}
+\newcommand{\Stab}[0]{\text{Stab}}
+\newcommand{\Diff}[0]{\text{Diff}}
+\newcommand{\Ad}[0]{\text{Ad}}
+\newcommand{\ad}[0]{\text{ad}}
+\newcommand{\Orb}[0]{\text{Orb}}
+\newcommand{\grad}[0]{\text{grad}}
+\newcommand{\can}[0]{\text{can}}
+\renewcommand{\span}[0]{\text{span}}
+\newcommand{\fr}[0]{\text{Fr}}
+\newcommand{\Lie}[0]{\text{Lie}}
+\newcommand{\Der}[0]{\text{Der}}
+\newcommand{\Aut}[0]{\text{Aut}}
+\newcommand{\X}[0]{\mathfrak{X}}
+\newcommand{\eps}[0]{\varepsilon}
+\newcommand{\prova}[0]{\textit{Prova: }}
+\newcommand{\dem}[0]{\textit{Demonstração: }}
+
+\newtheorem{lemma}{Lema}[section]
+\newtheorem{definition}{Definição}[section]
+\newtheorem{proposition}{Proposição}[section]
+\newtheorem{example}{Exemplo}[section]
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{corollary}{Corolário}[section]
+%% ACABOU OS PACOTES DA CAROL
+
+
+
+\usepackage{hyperref}
+
+
+%%%%%
+%%%%%%% INICIO SEÇAO: MARCOS ALEXANDRINO
+%%%%%
+
+\begin{document}
+
+\title[Órbitas e conjuntos alcançáves]{ \emph{Orbitas e conjuntos alcançáveis de familias de campos  vetores }
+\\ \footnotesize{(Relatório Semestral)}}
+\author[Caique da Silva Correa, M. Alexandrino]{ Candidato: Caique da Silva Correa  \\orientador: Prof Marcos M. Alexandrino}
+%\date{20 de outubro 2016}
+\maketitle
+
+
+%\setcounter{tocdepth}{2}
+\tableofcontents
+
+
+\part{Resultados esperados e obtidos}
+
+\section{Plano Inicial}
+
+\subsection{Resumo}
+
+%\section{Introducão}
+
+%O objetivo deste projeto é introduzir o 
+
+%No projeto anterior (Fapesp XXXX) o candidato estudou algumas propriedades 
+%de geodésicas na Geometria Riemanniana e Finsler (espaços de Randers)
+%e algumas interpretações em mecânica. Vide vídeo abaixo:
+
+%YYY
+
+Temos como objetivos estudar a teoria geométrica de controle,
+desenvolvendo a base necessária (ou seja, teoria de variedades,
+campos vetoriais e grupos de Lie) para a compreensão
+do teorema de Sussmann (que descreve o espaço de órbitas de uma familia de campos)
+e do teorema de Krener (que descreve os conjuntos alcançaveis de um sistema de controle).
+
+Futuramente, pretende-se utilizar os resultados estudados para compreender o Princípio
+de Maximilidade de Pontryagin, um dos primeiros resultados da teoria de otimização
+na teoria de controle.
+
+
+  
+
+% Trata-se aqui de um projeto amplo,
+%assim não se espera que o candidato explore cada tópico profundamente e sim perceba suas conexões. Embora
+%certos lemas sejam aceitos, ainda  sim algumas demonstrações de teoremas  
+%e calculos particulares serão abordados com o devido detalhamento. 
+ 
+\subsection{ Objetivos}
+\begin{itemize}
+
+
+\item Criar uma base sólida na  teoria de variedades necessárias para o projeto, abordando conceitos de 
+variedades, campos de vetores  e rudimentos de grupos de Lie; vide \cite{AlexBettiol}
+
+% Aprofundar conhecimentos adquiridos no projeto anterior Fapesp (processo: 2019/22488-1): 
+%\href{https://drive.google.com/file/d/1mSAdmCcIMt2Sk71LYsZNzwnrdBrYWjol/view?usp=sharing}{vide video explicativo %\cite{VideoGuilherme}}
+% %%%\href{https://drive.google.com/file/d/1quQMnLn3AQAQR8ufPH8gBjHhHkSc-w4Y/view?usp=sharing}{vide video explicativo \cite{VideoGuilherme}}
+%%%%\url{https://drive.google.com/file/d/1quQMnLn3AQAQR8ufPH8gBjHhHkSc-w4Y/view?usp=sharing } 
+%%%%em tópicos de geometria Riemanniana e Finsler, 
+%%%%%%Aprofundar conhecimentos adquiridos no projeto anterior Fapesp (processo: 2019/22488-1): 
+
+%tendo como fio condutor o estudo de funções transnormais e hipersuperfícies paralelas e equifocais. 
+ 
+\item Abordar as ideias das demonstrações dos teoremas de  Stefan e Sussmann (sobre estrutura das órbitas dos campos)
+ e teorema Krener (sobre conjunto alcançável) apresentados em \cite{Agrachev}.
+
+%Estudar hipersuperfícies paralelas e equifocais, dadas por funções transnormais em variedades de Finsler 
+% e algumas de suas aplicações (e.g  princípio de Huygens  e queimadas de florestas). 
+%%%%\item Adquirir uma visão geral que permita ao fim da graduação iniciar co-autoria na  
+%%%na escrita de artigo de divulgação sobre Finsler (e.g, com prof. Alexandrino e  Alves), que tenha como foco
+%%%%geometria de Randers, simétrias e frentes de ondas (e.,g em queimadas). 
+
+%\item  Desenvolver uma base para o  mestrado, para que projetos mais substanciais em 
+%geometria de Finsler (e.,g teoria de controle, folheações singulares e Finsler, 
+%ou Finsler e calculo variacional) possam ser abordados.  
+
+\end{itemize}
+
+
+\subsection{Cronograma}
+\label{Cronograma}
+
+\
+
+Ao longo dos 12 meses espera-se que os tópicos a seguir sejam abordados. 
+
+
+\
+
+\begin{tabular}{|l|l|c|} \hline
+Parte   & Tópico   & Duração \\ \hline
+Parte I &  Motivação a  teoria geométrica de controle &  1 mês \\ \hline
+Parte II & Variedades, campos e rudimentos de Grupos de Lie &  6 meses  \\ \hline
+Parte III & Teoremas de  Stefan e Sussmann  & 2 meses \\ \hline
+Parte IV & Teorema Krener & 1 meses \\ \hline
+\end{tabular}
+
+
+\section{Realizações}
+
+\subsection{Resultados previstos}
+%%
+Espera-se que o candidato solidifique sua base na temática proposta, abrindo caminho  para 
+(no próximo projeto)  abordar o princípio  de maximalidade
+de Pontryagin e soluções de vários problemas clássicos (e algumas implementações em python ou maple).
+
+Esperamos também, ao fim deste projeto, preparar
+vídeo resumindo o conteúdo abordado para um público  amplo.  
+
+\subsection{Detalhamento das Realizações}
+Detalha-se aqui o que foi realizado do cronograma no período em questão.
+
+\begin{itemize}
+	\item[1)] \textbf{Teoria de variedades, campos vetoriais e grupos de Lie.} Esses temas de
+	base foram estudados extensivamente, incluindo
+	teoremas clássicos como o Teorema de Frobenius, que posteriormente
+	foi discutido no contexto de sistemas de controle.
+	Foi utilizado como principal referência \cite{Spivak}, com consultas em \cite{AlexBettiol}
+	e em \cite{Lee}
+
+	\item[2)] \textbf{Teoria de controle e o teorema de Sussmann.} O teorema de Sussmann,
+	sua demonstração, seus corolários e alguns resultados relacionados foram estudados
+	atravéz do capítulo 5 de \cite{Agrachev}. Também foi estudado
+	o capítulo 2, que introduz a notação e alguns resultados utilizados no capítulo 5. 
+\end{itemize}
+
+\part{Coletânia de Resultados}
+
+Aqui, segue uma coletânia e um resumo do que foi estudado no período.
+\input{Controle.tex}
+
+
+
+
+
+%%%%%%%%%%%%%%
+%%% bibliografia M. Alexandrino
+%%%%%%%%%%%%% 
+\begin{thebibliography}{99}
+
+
+%\bibitem{AlexBettiol} M. M. Alexandrino,  R. G. Bettiol, 
+%\emph{Lie Groups and Geometric Aspects of Isometric Actions}. Springer Verlag  (2015)  
+
+
+
+
+\bibitem{Agrachev} A. Agrachev Y. Sachkov
+\emph{Control theory from the Geometric viewpoint }
+Encyclopedia of Mathematical Science, Control Theory and
+Optimization.  
+
+\bibitem{AlexBettiol} M. M. Alexandrino,  R. G. Bettiol, 
+\emph{Lie Groups and Geometric Aspects of Isometric Actions}. Springer Verlag  (2015)  
+
+
+\bibitem{mecanica-Holm} D.D. Holm, T. Schamah, C. Stoica
+\emph{Geometric Mechanics and Symmetry}, Oxford Texts 
+in Applied and Engineering Mathematics.
+
+\bibitem{Lee} J. M. Lee, \emph{Introduction to smooth manifolds}, Springer 
+
+\bibitem{Spivak} M. Spivak, 
+\emph{A comprehensive introduction to differential geometry}, Perish or publish. 
+
+%\bibitem{AlexBenignoHengameh}
+%M. M. Alexandrino, B. O. Alves,
+%H. R. Dehkordi, \emph{On Finsler transnormal functions}
+%Differential Geometry and its Applications v 65 (2019) 93--107.
+
+
+%\bibitem{AlexandrinoBettiol-livro}
+%M. M. Alexandrino, R. G. Bettiol, \emph{Lie groups and geometric aspects of isometric actions},
+%Springer Verlag (2015)
+
+%\bibitem{AlexandrinoMestrado}
+%M. M. Alexandrino, \emph{Hipersuperfícies de nível de uma função transnormal},
+%dissertação de mestrado, PUC-Rio (1997)
+
+
+%\bibitem{Alves-Phd} B.O Alves, \emph{Sobre folheações Finslerianas singulares}
+%Tese de doutorado, IME-USP (2017)
+
+
+%\bibitem{VideoGuilherme}
+%G. Cerqueira Gonçalves, \emph{Algumas aplicações de mecânica na geometria Riemanniana e 
+%Finsleriana} video baseado na apresentação do  28 Simpósio Internacional
+%de Iniciação Científica e Tecnológica da USP: 
+%\url{https://drive.google.com/file/d/1mSAdmCcIMt2Sk71LYsZNzwnrdBrYWjol/view?usp=sharing}
+%\url{https://drive.google.com/file/d/1quQMnLn3AQAQR8ufPH8gBjHhHkSc-w4Y/view?usp=sharing }
+%\url{https://drive.google.com/file/d/1quQMnLn3AQAQR8ufPH8gBjHhHkSc-w4Y/view?usp=sharing }
+
+
+%\bibitem{HengamegSaa}
+%H.R. 	Dehkordi  and S. Alberto, \textit{Huygens? envelope principle in Finsler spaces and analogue gravity.} Classical and Quantum Gravity 36.8 (2019): 085008.
+	
+%	\bibitem{SalomaoUmberto}
+%U. L 	Hryniewicz  and P. A. Salomão, \emph{Introdu\c{c}\~{a}o a geometria Finsler.} IMPA, 2013.
+	
+%\bibitem{Markvorsen}
+%S. Markvorsen,  \textit{A Finsler geodesic spray paradigm for wildfire spread modelling.} Nonlinear Analysis: Real World Applications 28 (2016): 208-228.
+
+	
+
+
+%\bibitem{Th} G. Thorbergsson,
+%\textit{A survey on isoparametric hypersurfaces and their generalizations},
+%Handbook of differential geometry, vol.\ 1, Elsevier Science, 2000.
+
+
+%\bibitem{ThSurvey2} G. Thorbergsson, \textit{Transformation groups and submanifold geometry}, Rendiconti di Matematica, Serie VII, \textbf{25} (2005), 1--16.
+
+%\bibitem{ThSurvey3} G. Thorbergsson, \textit{Singular Riemannian foliations and isoparametric submanifolds}, Milan J. Math. \textbf{78} (2010), 355--370.
+
+
+		
+	
+
+
+\end{thebibliography}
+%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% bibliografia M Alexandrino
+%%%%%%%%%%%
+
+\end{document}
+

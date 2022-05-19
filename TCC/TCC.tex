@@ -1,0 +1,254 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% PROJETO MARCOS ALEXANDRINO
+%%%%%%% TEMÁTICO DE PAOLO PICCIONE (2016)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[11pt, reqno]{amsart}
+%\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[brazil,english]{babel}
+\usepackage{amsfonts,amsmath,amsthm}
+
+\usepackage[margin=0.9in]{geometry}
+%%
+%%obs o BABEL nao interfere com outros pacotes. 
+%Porem voce recebera 1 warning, referente a  ifenaçao do portugues
+%ignore!
+
+%%PACOTES DA CAROL
+
+\usepackage[mathscr]{euscript}
+\let\euscr\mathscr \let\mathscr\relax% just so we can load this and rsfs
+\usepackage[scr]{rsfso}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{stackengine}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{bussproofs}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage[hidelinks]{hyperref}
+\usepackage{setspace}
+\usepackage{nopageno}
+\usepackage{fancyhdr}
+\usepackage{tikz-cd}
+\usepackage{float}
+
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shapes}
+
+\newcommand{\mytitle}[1]{\textbf{\underline{#1}}}
+\newcommand{\product}[3]{\displaystyle\prod_{#1}^#2 #3}
+\newcommand{\gsum}[3]{\displaystyle\sum_{#1}^#2 #3}
+\newcommand{\dint}[0]{\displaystyle\int}
+\newcommand{\dsum}[0]{\displaystyle\sum}
+\newcommand{\del}[0]{\partial}
+\newcommand{\de}[0]{\text{d}}
+\newcommand{\parti}[2]{\frac{\del #1}{\del #2}}
+\newcommand{\deri}[2]{\frac{\de #1}{\de #2}}
+\newcommand{\mdc}[0]{\text{mdc}}
+\newcommand{\mmc}[0]{\text{mmc}}
+\newcommand{\im}[0]{\text{Im}}
+\newcommand{\e}[0]{\text{e}}
+\newcommand{\ou}[0]{\text{ou}}
+\newcommand{\se}[0]{\text{se}}
+\newcommand{\tr}[0]{\text{tr}}
+\newcommand{\<}[0]{\langle}
+\newcommand{\Q}[0]{\mathbb{Q}}
+\newcommand{\K}[0]{\mathbb{K}}
+\renewcommand{\>}[0]{\rangle}
+\newcommand{\ov}[0]{\overline}
+\newcommand{\real}[0]{\mathbb{R}}
+\newcommand{\rr}[0]{\mathbb{R}^2}
+\newcommand{\rn}[0]{\mathbb{R}^n}
+\newcommand\xrowht[2][0]{\addstackgap[.5\dimexpr#2\relax]{\vphantom{#1}}}
+\newcommand{\card}[0]{\text{card}}
+\newcommand{\aut}[0]{\text{Aut}}
+\newcommand{\inn}[0]{\text{Inn}}
+\newcommand{\ann}[0]{\text{Ann}}
+\newcommand{\id}[0]{\text{Id}}
+\newcommand{\into}[0]{\hookrightarrow}
+\newcommand{\Z}[0]{\mathbb{Z}}
+\newcommand{\T}[0]{\mathbb{T}}
+\newcommand{\M}[0]{\mathbb{M}}
+\renewcommand{\P}[0]{\mathbb{P}}
+\renewcommand{\S}[0]{\mathbb{S}}
+\newcommand{\D}[0]{\mathbb{D}}
+\newcommand{\N}[0]{\mathbb{N}}
+\newcommand{\disp}[0]{\displaystyle}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\sgn}[0]{\text{sgn}}
+\newcommand{\ab}[0]{\text{Ab}}
+\newcommand{\Stab}[0]{\text{Stab}}
+\newcommand{\Diff}[0]{\text{Diff}}
+\newcommand{\Ad}[0]{\text{Ad}}
+\newcommand{\ad}[0]{\text{ad}}
+\newcommand{\Orb}[0]{\text{Orb}}
+\newcommand{\grad}[0]{\text{grad}}
+\newcommand{\can}[0]{\text{can}}
+\renewcommand{\span}[0]{\text{span}}
+\newcommand{\fr}[0]{\text{Fr}}
+\newcommand{\Lie}[0]{\text{Lie}}
+\newcommand{\Der}[0]{\text{Der}}
+\newcommand{\Aut}[0]{\text{Aut}}
+\newcommand{\X}[0]{\mathfrak{X}}
+\newcommand{\eps}[0]{\varepsilon}
+\newcommand{\prova}[0]{\textit{Prova: }}
+\newcommand{\dem}[0]{\textit{Demonstração: }}
+
+\newtheorem{lemma}{Lema}[section]
+\newtheorem{definition}{Definição}[section]
+\newtheorem{proposition}{Proposição}[section]
+\newtheorem{example}{Exemplo}[section]
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{corollary}{Corolário}[section]
+
+\counterwithin{equation}{section}
+\counterwithin{figure}{section}
+
+%% ACABOU OS PACOTES DA CAROL
+
+
+
+\usepackage{hyperref}
+
+
+%%%%%
+%%%%%%% INICIO SEÇAO: MARCOS ALEXANDRINO
+%%%%%
+
+\begin{document}
+
+\title[Geometric Aspects of Control Theory]{ \emph{Geometric Aspects of Control Theory}
+\\ \footnotesize{(Monography)}}
+\author[Carolina da Silva Correa, M. Alexandrino]{Candidate: Carolina da Silva Correa 
+\\orientor: Prof Marcos M. Alexandrino}
+%\date{20 de outubro 2016}
+\maketitle
+
+
+%\setcounter{tocdepth}{2}
+\tableofcontents
+
+\pagebreak
+
+
+\part{Introduction}
+
+\input{Part1.tex}
+
+\part{Jáfizsla}
+
+\input{Controle.tex}
+
+\part{Appendixes}
+\label{apdx:EDOs}
+
+
+
+
+
+%%%%%%%%%%%%%%
+%%% bibliografia M. Alexandrino
+%%%%%%%%%%%%% 
+\begin{thebibliography}{99}
+
+
+%\bibitem{AlexBettiol} M. M. Alexandrino,  R. G. Bettiol, 
+%\emph{Lie Groups and Geometric Aspects of Isometric Actions}. Springer Verlag  (2015)  
+
+
+
+
+\bibitem{Agrachev} A. Agrachev Y. Sachkov
+\emph{Control theory from the Geometric viewpoint }
+Encyclopedia of Mathematical Science, Control Theory and
+Optimization.  
+
+\bibitem{AlexBettiol} M. M. Alexandrino,  R. G. Bettiol, 
+\emph{Lie Groups and Geometric Aspects of Isometric Actions}. Springer Verlag  (2015)  
+
+
+\bibitem{mecanica-Holm} D.D. Holm, T. Schamah, C. Stoica
+\emph{Geometric Mechanics and Symmetry}, Oxford Texts 
+in Applied and Engineering Mathematics.
+
+\bibitem{Lee} J. M. Lee, \emph{Introduction to smooth manifolds}, Springer 
+
+\bibitem{Spivak} M. Spivak, 
+\emph{A comprehensive introduction to differential geometry}, Perish or publish. 
+
+%\bibitem{AlexBenignoHengameh}
+%M. M. Alexandrino, B. O. Alves,
+%H. R. Dehkordi, \emph{On Finsler transnormal functions}
+%Differential Geometry and its Applications v 65 (2019) 93--107.
+
+
+%\bibitem{AlexandrinoBettiol-livro}
+%M. M. Alexandrino, R. G. Bettiol, \emph{Lie groups and geometric aspects of isometric actions},
+%Springer Verlag (2015)
+
+%\bibitem{AlexandrinoMestrado}
+%M. M. Alexandrino, \emph{Hipersuperfícies de nível de uma função transnormal},
+%dissertação de mestrado, PUC-Rio (1997)
+
+
+%\bibitem{Alves-Phd} B.O Alves, \emph{Sobre folheações Finslerianas singulares}
+%Tese de doutorado, IME-USP (2017)
+
+
+%\bibitem{VideoGuilherme}
+%G. Cerqueira Gonçalves, \emph{Algumas aplicações de mecânica na geometria Riemanniana e 
+%Finsleriana} video baseado na apresentação do  28 Simpósio Internacional
+%de Iniciação Científica e Tecnológica da USP: 
+%\url{https://drive.google.com/file/d/1mSAdmCcIMt2Sk71LYsZNzwnrdBrYWjol/view?usp=sharing}
+%\url{https://drive.google.com/file/d/1quQMnLn3AQAQR8ufPH8gBjHhHkSc-w4Y/view?usp=sharing }
+%\url{https://drive.google.com/file/d/1quQMnLn3AQAQR8ufPH8gBjHhHkSc-w4Y/view?usp=sharing }
+
+
+%\bibitem{HengamegSaa}
+%H.R. 	Dehkordi  and S. Alberto, \textit{Huygens? envelope principle in Finsler spaces and analogue gravity.} Classical and Quantum Gravity 36.8 (2019): 085008.
+	
+%	\bibitem{SalomaoUmberto}
+%U. L 	Hryniewicz  and P. A. Salomão, \emph{Introdu\c{c}\~{a}o a geometria Finsler.} IMPA, 2013.
+	
+%\bibitem{Markvorsen}
+%S. Markvorsen,  \textit{A Finsler geodesic spray paradigm for wildfire spread modelling.} Nonlinear Analysis: Real World Applications 28 (2016): 208-228.
+
+	
+
+
+%\bibitem{Th} G. Thorbergsson,
+%\textit{A survey on isoparametric hypersurfaces and their generalizations},
+%Handbook of differential geometry, vol.\ 1, Elsevier Science, 2000.
+
+
+%\bibitem{ThSurvey2} G. Thorbergsson, \textit{Transformation groups and submanifold geometry}, Rendiconti di Matematica, Serie VII, \textbf{25} (2005), 1--16.
+
+%\bibitem{ThSurvey3} G. Thorbergsson, \textit{Singular Riemannian foliations and isoparametric submanifolds}, Milan J. Math. \textbf{78} (2010), 355--370.
+
+
+		
+	
+
+
+\end{thebibliography}
+%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% bibliografia M Alexandrino
+%%%%%%%%%%%
+
+\end{document}
+
